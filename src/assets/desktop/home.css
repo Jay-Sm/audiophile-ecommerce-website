@@ -1,0 +1,3 @@
+.cart-icon-desktop {
+  @apply fill-white hover:fill-theme-orange2 transition-colors
+}

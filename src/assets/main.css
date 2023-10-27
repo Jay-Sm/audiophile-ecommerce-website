@@ -1,35 +1,28 @@
-@import './base.css';
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+@import url(./desktop/home.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply font-manrope text-[13px];
+}
+
+html {
+  @apply h-full;
+}
+
+body {
+  @apply h-screen;
+}
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  @apply h-screen;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.router-link-active {
+  @apply text-theme-orange2
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
