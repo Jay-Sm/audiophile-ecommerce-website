@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <div class="py-[8rem] px-[11.5rem]">
+  <div class="pt-[8rem] px-[11.5rem]">
     <div class="flex flex-row justify-between">
 
       <div class="flex flex-col items-center">
@@ -91,25 +91,33 @@
       </div>
     </div>
 
-    <div class="pl-[8rem] mt-[8rem] w-full h-[30rem] bg-theme-orange2 rounded-lg home-speaker flex flex-row gap-x-[8rem] overflow-hidden">
+    <div
+      class="pl-[8rem] mt-[8rem] w-full h-[30rem] bg-theme-orange2 rounded-lg home-speaker-zx9 flex flex-row gap-x-[8rem] overflow-hidden">
       <div class="h-full flex items-end">
         <img class="h-[90%] mb-[-0.5px]" src="../assets/images/home/desktop/image-speaker-zx9.png" alt="">
       </div>
       <div class="flex flex-col justify-center text-white w-[21rem] gap-y-5">
-        <h1>{{ "ZX9 Speakerr".toUpperCase() }}</h1>
+        <h1>{{ "ZX9 Speaker".toUpperCase() }}</h1>
         <p>
           Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
         </p>
         <div class="bg-white max-w-fit min-h-fit rounded-sm flex mt-4">
-          <router-link :to="{name:'speakers'}" class="bg-black to-product hover:opacity-80 transition-opacity">
+          <router-link :to="{ name: 'speakers' }" class="bg-black to-product hover:opacity-80 transition-opacity">
             {{ "See Product".toUpperCase() }}
           </router-link>
         </div>
       </div>
     </div>
 
-    <div>
-      
+    <div class="my-[4rem] w-full h-[20rem] pl-[6rem] bg-theme-gray home rounded-lg overflow-hidden home-speaker-zx7">
+      <div class="h-full flex flex-col justify-center gap-y-5">
+        <h2>{{ "ZX7 Speaker".toUpperCase() }}</h2>
+        <div class="max-w-fit min-h-fit flex mt-2">
+          <router-link :to="{ name: 'speakers' }" class="!rounded-none border to-product hover:opacity-80 transition-opacity">
+            {{ "See Product".toUpperCase() }}
+          </router-link>
+        </div>
+      </div>
     </div>
 
   </div>

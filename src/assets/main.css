@@ -29,3 +29,7 @@ header .router-link-active {
 h1 {
   @apply text-7xl font-bold max-w-[28rem] mt-3;
 }
+
+h2 {
+  @apply text-3xl font-semibold max-w-[28rem] mt-3;
+}

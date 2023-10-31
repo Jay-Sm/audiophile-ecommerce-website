@@ -7,13 +7,22 @@
   background-image: url("../../assets/images/home/desktop/image-hero.jpg");
 }
 
-.home-speaker {
+.home-speaker-zx9 {
   @apply bg-no-repeat;
   background-position-x: -8rem;
   background-position-y: -2rem;
   background-size: 55rem;
   background-image: url("../../assets/images/home/desktop/pattern-circles.svg");
 }
+
+.home-speaker-zx7 {
+  @apply bg-no-repeat bg-cover;
+  /* background-position-x: -8rem;
+  background-position-y: -2rem;
+  background-size: 55rem; */
+  background-image: url("../../assets/images/home/desktop/image-speaker-zx7.jpg");
+}
+
 
 .to-product {
   @apply max-w-fit font-semibold py-3 px-5 rounded-sm box-border;
