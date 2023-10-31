@@ -1,14 +1,11 @@
 <template>
-  <header class="relative h-screen  px-[11.5rem] text-white">
-    <div class="absolute left-0 right-0 -top-6 z-0">
-      <img src="../assets/images/home/desktop/image-hero.jpg" class="w-full">
-    </div>
-    <div class="relative z-10">
-      <div class="flex flex-row justify-between py-9">
+  <div class="h-screen px-[11.5rem] text-white hero overflow-y-hidden">
+    <header>
+      <div class="flex flex-row justify-between py-9 select-none">
         <router-link :to="{ name: 'home' }">
-          <img src="../assets/images/shared/desktop/logo.svg" alt="">
+          <img class="min-w-fit" src="../assets/images/shared/desktop/logo.svg" alt="">
         </router-link>
-        <nav>
+        <nav class="text-[13px]">
           <ul class="flex flex-row gap-10 font-bold tracking-[0.13rem]">
             <li><router-link :to="{ name: 'home' }" class="transition-colors hover:text-theme-orange2">{{
               "Home".toUpperCase() }}</router-link></li>
@@ -33,10 +30,74 @@
       </div>
 
       <div class="h-[0.5px] bg-[#ffffff5b]"></div>
-    </div>
-  </header>
-</template>
+    </header>
 
+    <div class="flex h-full flex-col justify-center">
+      <div class="max-w-fit -mt-10">
+        <h3 class="text-xl tracking-[0.8rem] text-theme-gray2">{{ "New Product".toUpperCase() }}</h3>
+        <h1 class="text-7xl font-bold max-w-[28rem] mt-3">XX99 Mark II Headphones</h1>
+        <p class=" my-8 max-w-[28rem] opacity-75">Experience natural, lifelike audio and exceptional build quality made
+          for the passionate music enthusiast.</p>
+      </div>
+      <button class="bg-theme-orange2 max-w-fit py-3 px-5 rounded-sm">{{ "See Product".toUpperCase() }}</button>
+    </div>
+  </div>
+
+  <div class="py-[8rem] px-[11.5rem]">
+    <div class="flex flex-row justify-between">
+
+      <div class="flex flex-col items-center">
+        <div class="-mb-[8rem] relative z-10">
+          <img class="h-[12rem] max-w-fit" src="../assets/images/shared/desktop/image-headphones.png" alt="">
+        </div>
+        <div class="px-[8.5rem] pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
+          <p class="font-bold text-lg tracking-wider">{{ "Headphones".toUpperCase() }}</p>
+          <router-link :to="{ name: 'headphones' }"
+            class="transition-colors duration-[250ms] text-[#0000008c] hover:text-theme-orange2 flex flex-row items-center gap-x-3 mt3">
+            <p class="font-semibold text-sm">{{ "Shop".toUpperCase() }}</p>
+            <img src="../assets/images/shared/desktop/icon-arrow-right.svg" class="max-w-fit max-h-fit w-fit h-fit">
+          </router-link>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="-mb-[8rem] relative z-10">
+          <img class="h-[12rem] max-w-fit" src="../assets/images/shared/desktop/image-speakers.png" alt="">
+        </div>
+        <div class="px-[8.5rem] pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
+          <p class="font-bold text-lg tracking-wider">{{ "Speakers".toUpperCase() }}</p>
+          <router-link :to="{ name: 'speakers' }"
+            class="transition-colors duration-[250ms] text-[#0000008c] hover:text-theme-orange2 flex flex-row items-center gap-x-3 mt3">
+            <p class="font-semibold text-sm">{{ "Shop".toUpperCase() }}</p>
+            <img src="../assets/images/shared/desktop/icon-arrow-right.svg" class="max-w-fit max-h-fit w-fit h-fit">
+          </router-link>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="-mb-[8rem] relative z-10">
+          <img class="h-[12rem] max-w-fit" src="../assets/images/shared/desktop/image-earphones.png" alt="">
+        </div>
+        <div class="px-[8.5rem] pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
+          <p class="font-bold text-lg tracking-wider">{{ "Earphones".toUpperCase() }}</p>
+          <router-link :to="{ name: 'earphones' }"
+            class="transition-colors duration-[250ms] text-[#0000008c] hover:text-theme-orange2 flex flex-row items-center gap-x-3 mt3">
+            <p class="font-semibold text-sm">{{ "Shop".toUpperCase() }}</p>
+            <img src="../assets/images/shared/desktop/icon-arrow-right.svg" class="max-w-fit max-h-fit w-fit h-fit">
+          </router-link>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-[8rem] w-full h-[30rem] bg-theme-orange2 rounded-lg home-speaker flex flex-row px-[6rem]">
+      <div class="h-full flex items-end">
+        <img class="h-[90%] min-w-" src="../assets/images/home/desktop/image-speaker-zx9.png" alt="">
+      </div>
+      <div>stuff</div>
+    </div>
+
+  </div>
+</template>
 <script setup>
 
 </script>

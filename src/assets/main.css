@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 :root {
-  @apply font-manrope text-[13px];
+  @apply font-manrope text-[15px];
 }
 
 html {
