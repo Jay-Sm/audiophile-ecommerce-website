@@ -39,7 +39,9 @@
         <p class=" my-8 max-w-[28rem] opacity-75">Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.</p>
       </div>
-      <button class="bg-theme-orange2 max-w-fit py-3 px-5 rounded-sm">{{ "See Product".toUpperCase() }}</button>
+      <router-link :to="{ name: 'headphones' }"
+        class="bg-theme-orange2 hover:bg-theme-orange transition-colors  to-product">{{ "See Product".toUpperCase()
+        }}</router-link>
     </div>
   </div>
 
@@ -89,11 +91,25 @@
       </div>
     </div>
 
-    <div class="mt-[8rem] w-full h-[30rem] bg-theme-orange2 rounded-lg home-speaker flex flex-row px-[6rem]">
+    <div class="pl-[8rem] mt-[8rem] w-full h-[30rem] bg-theme-orange2 rounded-lg home-speaker flex flex-row gap-x-[8rem] overflow-hidden">
       <div class="h-full flex items-end">
-        <img class="h-[90%] min-w-" src="../assets/images/home/desktop/image-speaker-zx9.png" alt="">
+        <img class="h-[90%] mb-[-0.5px]" src="../assets/images/home/desktop/image-speaker-zx9.png" alt="">
       </div>
-      <div>stuff</div>
+      <div class="flex flex-col justify-center text-white w-[21rem] gap-y-5">
+        <h1>{{ "ZX9 Speakerr".toUpperCase() }}</h1>
+        <p>
+          Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
+        </p>
+        <div class="bg-white max-w-fit min-h-fit rounded-sm flex mt-4">
+          <router-link :to="{name:'speakers'}" class="bg-black to-product hover:opacity-80 transition-opacity">
+            {{ "See Product".toUpperCase() }}
+          </router-link>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      
     </div>
 
   </div>

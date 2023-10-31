@@ -22,7 +22,10 @@ body {
   @apply h-screen;
 }
 
-.router-link-active {
-  @apply text-theme-orange2
+header .router-link-active {
+  @apply text-theme-orange2;
 }
 
+h1 {
+  @apply text-7xl font-bold max-w-[28rem] mt-3;
+}

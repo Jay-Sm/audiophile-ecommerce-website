@@ -10,17 +10,17 @@ const routes = [
   {
     path: "/headphones",
     name: "headphones",
-    component: () => import("../views/Headphones.vue"),
+    component: () => import("../views/Navigation/Headphones.vue"),
   },
   {
     path: "/speakers",
     name: "speakers",
-    component: () => import("../views/Speakers.vue"),
+    component: () => import("../views/Navigation/Speakers.vue"),
   },
   {
     path: "/earphones",
     name: "earphones",
-    component: () => import("../views/Earphones.vue"),
+    component: () => import("../views/Navigation/Earphones.vue"),
   },
 ];
 
