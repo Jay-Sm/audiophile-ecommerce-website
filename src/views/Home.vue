@@ -113,7 +113,23 @@
       <div class="h-full flex flex-col justify-center gap-y-5">
         <h2>{{ "ZX7 Speaker".toUpperCase() }}</h2>
         <div class="max-w-fit min-h-fit flex mt-2">
-          <router-link :to="{ name: 'speakers' }" class="!rounded-none border to-product hover:opacity-80 transition-opacity">
+          <router-link :to="{ name: 'speakers' }"
+            class="!rounded-none border to-product hover:bg-black hover:text-white transition-all">
+            {{ "See Product".toUpperCase() }}
+          </router-link>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full h-[21rem] flex gap-x-7">
+      <div class="w-full h-full flex flex-col justify-center gap-y-5 bg-theme-gray rounded-md overflow-hidden home-earphones">
+        
+      </div>
+      <div class="w-full h-full flex flex-col justify-center gap-y-5 bg-theme-gray rounded-md overflow-hidden pl-[7rem]">
+        <h2>{{ "YX1 Earphones".toUpperCase() }}</h2>
+        <div class="max-w-fit min-h-fit flex mt-2">
+          <router-link :to="{ name: 'speakers' }"
+            class="!rounded-none border to-product hover:bg-black hover:text-white transition-all">
             {{ "See Product".toUpperCase() }}
           </router-link>
         </div>

@@ -31,5 +31,5 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl font-semibold max-w-[28rem] mt-3;
+  @apply text-3xl font-bold tracking-widest max-w-[28rem] mt-3;
 }

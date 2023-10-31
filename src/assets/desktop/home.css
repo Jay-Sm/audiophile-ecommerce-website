@@ -23,6 +23,14 @@
   background-image: url("../../assets/images/home/desktop/image-speaker-zx7.jpg");
 }
 
+.home-earphones {
+  @apply bg-no-repeat bg-cover;
+  /* background-position-x: -8rem;
+  background-position-y: -2rem;
+  background-size: 55rem; */
+  background-image: url("../../assets/images/home/desktop/image-earphones-yx1.jpg");
+}
+
 
 .to-product {
   @apply max-w-fit font-semibold py-3 px-5 rounded-sm box-border;
