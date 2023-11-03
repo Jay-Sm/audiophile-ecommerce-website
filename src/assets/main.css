@@ -7,22 +7,33 @@
 @tailwind utilities;
 
 :root {
-  @apply font-manrope text-[15px];
+  @apply font-manrope;
+  @apply max-[1280px]:text-[13px] laptop:text-[17px] laptop-lg:text-[19px] laptop-xl:text-[25px] tv-screen:text-[38px];
 }
 
-html {
+.nav-text {
+  @apply text-[14px] laptop:text-[17px] laptop-lg:text-[17px] laptop-xl:text-[21px] tv-screen:text-[35px];
 }
 
 body {
-  @apply h-full;
+  @apply h-full overflow-x-hidden;
 }
 
 #app {
   @apply h-full;
 }
 
-header .router-link-active {
+header .router-link-active,
+footer .router-link-active {
   @apply text-theme-orange2;
+}
+
+footer a img {
+  @apply min-w-[1.6rem] min-h-[1.6rem];
+}
+
+.logo{
+  @apply min-w-fit w-[10rem] select-none pointer-events-none
 }
 
 h1 {
@@ -38,5 +49,5 @@ h3 {
 }
 
 h3 span {
-  @apply text-theme-orange2
+  @apply text-theme-orange2;
 }

@@ -1,9 +1,14 @@
 .cart-icon-desktop {
-  @apply fill-white hover:fill-theme-orange2 transition-colors;
+  @apply min-w-[1.533rem] min-h-[1.667rem] select-none pointer-events-none;
+  filter: invert(100%) sepia(0%) saturate(7496%) hue-rotate(58deg) brightness(118%) contrast(100%);
+}
+
+button:hover .cart-icon-desktop {
+  filter: invert(61%) sepia(66%) saturate(1073%) hue-rotate(330deg) brightness(93%) contrast(81%);
 }
 
 .hero {
-  @apply bg-no-repeat bg-cover bg-center;
+  @apply bg-no-repeat bg-cover bg-center select-none;
   background-image: url("../../assets/images/home/desktop/image-hero.jpg");
 }
 
@@ -30,7 +35,6 @@
   background-size: 55rem; */
   background-image: url("../../assets/images/home/desktop/image-earphones-yx1.jpg");
 }
-
 
 .to-product {
   @apply max-w-fit font-semibold py-3 px-5 rounded-sm box-border;
