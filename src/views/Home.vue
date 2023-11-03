@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col items-center">
     <div class="max-w-[120rem] px-[11.5rem] min-w-0 w-full mt-[8rem]">
-      <div class="flex flex-row justify-between">
+      <div class="flex flex-row justify-between gap-[4rem]">
 
-        <div class="flex flex-col items-center">
+        <div class="w-full flex flex-col items-center">
           <div class="-mb-[8rem] relative z-10">
             <img class="h-[12rem] max-w-fit" src="../assets/images/shared/desktop/image-headphones.png" alt="">
           </div>
-          <div class="px-[8.5rem] pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
+          <div class="w-full min-w-fit px-6 pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
             <p class="font-bold text-lg tracking-wider">{{ "Headphones".toUpperCase() }}</p>
             <router-link :to="{ name: 'headphones' }"
               class="transition-colors duration-[250ms] text-[#0000008c] hover:text-theme-orange2 flex flex-row items-center gap-x-3 mt3">
@@ -17,11 +17,11 @@
           </div>
         </div>
 
-        <div class="flex flex-col items-center">
+        <div class="w-full flex flex-col items-center">
           <div class="-mb-[8rem] relative z-10">
             <img class="h-[12rem] max-w-fit" src="../assets/images/shared/desktop/image-speakers.png" alt="">
           </div>
-          <div class="px-[8.5rem] pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
+          <div class="w-full min-w-fit px-6 pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
             <p class="font-bold text-lg tracking-wider">{{ "Speakers".toUpperCase() }}</p>
             <router-link :to="{ name: 'speakers' }"
               class="transition-colors duration-[250ms] text-[#0000008c] hover:text-theme-orange2 flex flex-row items-center gap-x-3 mt3">
@@ -31,11 +31,11 @@
           </div>
         </div>
 
-        <div class="flex flex-col items-center">
+        <div class="w-full flex flex-col items-center">
           <div class="-mb-[8rem] relative z-10">
             <img class="h-[12rem] max-w-fit" src="../assets/images/shared/desktop/image-earphones.png" alt="">
           </div>
-          <div class="px-[8.5rem] pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
+          <div class="w-full min-w-fit px-6 pb-[2rem] pt-[8rem] bg-theme-gray rounded-lg flex flex-col items-center">
             <p class="font-bold text-lg tracking-wider">{{ "Earphones".toUpperCase() }}</p>
             <router-link :to="{ name: 'earphones' }"
               class="transition-colors duration-[250ms] text-[#0000008c] hover:text-theme-orange2 flex flex-row items-center gap-x-3 mt3">

@@ -7,9 +7,14 @@ button:hover .cart-icon-desktop {
   filter: invert(61%) sepia(66%) saturate(1073%) hue-rotate(330deg) brightness(93%) contrast(81%);
 }
 
-.hero {
+.hero-desktop {
   @apply bg-no-repeat bg-cover bg-center select-none;
   background-image: url("../../assets/images/home/desktop/image-hero.jpg");
+}
+
+.hero-tablet {
+  @apply bg-no-repeat bg-cover bg-center select-none;
+  background-image: url("../../assets/images/home/tablet/image-header.jpg");
 }
 
 .home-speaker-zx9 {

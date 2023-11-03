@@ -1,5 +1,5 @@
 <template>
-  <div v-if="routeName == 'home'" class="h-screen w-full px-[11.5rem] text-white hero overflow-y-hidden">
+  <div v-if="routeName == 'home' && screenWidth > 960" class="h-screen w-full px-[11.5rem] text-white hero-desktop overflow-y-hidden">
     <header>
       <div class="flex flex-row justify-between py-9 select-none">
         <router-link :to="{ name: 'home' }">
@@ -29,6 +29,49 @@
     </header>
 
     <div class="flex h-full flex-col justify-center">
+      <div class="max-w-fit -mt-10">
+        <h3 class="text-xl tracking-[0.8rem] text-theme-gray2">{{ "New Product".toUpperCase() }}</h3>
+        <h1 class="text-7xl font-bold max-w-[28rem] mt-3">XX99 Mark II Headphones</h1>
+        <p class=" my-8 max-w-[28rem] opacity-75">Experience natural, lifelike audio and exceptional build quality made
+          for the passionate music enthusiast.</p>
+      </div>
+      <router-link :to="{ name: 'headphones' }"
+        class="bg-theme-orange2 hover:bg-theme-orange transition-colors  to-product">{{ "See Product".toUpperCase()
+        }}</router-link>
+    </div>
+  </div>
+
+
+  <div v-if="routeName == 'home' && screenWidth <= 960" class="h-screen w-full px-[11.5rem] text-white hero-tablet overflow-y-hidden">
+    <header>
+      <div class="flex flex-row justify-between py-9 select-none">
+        <router-link :to="{ name: 'home' }">
+          <img class="min-w-fit logo" src="./assets/images/shared/desktop/logo.svg" alt="">
+        </router-link>
+        <nav class="nav-text">
+          <ul class="flex flex-row gap-10 font-bold tracking-[0.13rem]">
+            <li><router-link :to="{ name: 'home' }" class="transition-colors hover:text-theme-orange2">{{
+              "Home".toUpperCase() }}</router-link></li>
+            <li><router-link :to="{ name: 'headphones' }" class="transition-colors hover:text-theme-orange2">{{
+              "Headphones".toUpperCase() }}</router-link>
+            </li>
+            <li><router-link :to="{ name: 'speakers' }" class="transition-colors hover:text-theme-orange2">{{
+              "Speakers".toUpperCase() }}</router-link></li>
+            <li><router-link :to="{ name: 'earphones' }" class="transition-colors hover:text-theme-orange2">{{
+              "Earphones".toUpperCase() }}</router-link></li>
+          </ul>
+        </nav>
+        <div>
+          <button>
+            <img class="cart-icon-desktop" src="./assets/images/shared/desktop/icon-cart.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+      <div class="h-[0.053rem] bg-[#ffffff5b] relative z-10"></div>
+    </header>
+
+    <div class="flex h-full flex-col justify-center items-center text-center">
       <div class="max-w-fit -mt-10">
         <h3 class="text-xl tracking-[0.8rem] text-theme-gray2">{{ "New Product".toUpperCase() }}</h3>
         <h1 class="text-7xl font-bold max-w-[28rem] mt-3">XX99 Mark II Headphones</h1>
@@ -91,13 +134,17 @@
 </template>
 
 <script setup>
-import { watchEffect, ref } from "vue";
+import { watchEffect, ref, reactive } from "vue";
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const routeName = ref(router.currentRoute.value.name)
+watchEffect(() => { routeName.value = router.currentRoute.value.name })
 
-watchEffect(() => { routeName.value = router.currentRoute.value.name; console.log(routeName.value, routeName.value == 'home' ? 'true' : 'false') })
+const screenWidth = ref(window.innerWidth);
+window.addEventListener('resize', () => {
+  screenWidth.value = window.innerWidth;
+});
 
 </script>
 
